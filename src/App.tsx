@@ -12,6 +12,7 @@ import {
   Clock3,
   Headset,
   LayoutDashboard,
+  type LucideIcon,
   Menu,
   Monitor,
   Plus,
@@ -26,7 +27,19 @@ import {
 } from "lucide-react";
 import "./App.css";
 
-const navigation = [
+interface NavigationItem {
+  label: string;
+  icon: LucideIcon;
+  count?: string;
+  badge?: string;
+}
+
+interface NavigationGroup {
+  title: string;
+  items: NavigationItem[];
+}
+
+const navigation: NavigationGroup[] = [
   { title: "GENERAL", items: [
     { label: "Dashboard", icon: LayoutDashboard },
     { label: "Solicitudes y tickets", icon: Ticket, count: "8" },
