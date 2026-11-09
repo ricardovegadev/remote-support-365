@@ -304,7 +304,7 @@ function App() {
 
           <footer className="footer">
             <span>© 2026 Remote Support 365</span>
-            <span>Plataforma en construcción · Versión inicial</span>
+            <span>Plataforma en construcción · Versión 1 inicial</span>
           </footer>
         </div>
       </main>
