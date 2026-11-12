@@ -31,7 +31,6 @@ export const navigation: NavigationGroup[] = [
         id: "tickets",
         label: "Solicitudes y tickets",
         icon: Ticket,
-        count: "8",
       },
       {
         id: "clients",
