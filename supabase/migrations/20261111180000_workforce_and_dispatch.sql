@@ -30,9 +30,11 @@ create table if not exists public.dispatch_skills (
     category text not null default 'General',
     description text,
     is_active boolean not null default true,
-    created_at timestamptz not null default now(),
-    unique (organization_id, lower(name))
+    created_at timestamptz not null default now()
 );
+
+create unique index if not exists dispatch_skills_org_lower_name_idx
+    on public.dispatch_skills (organization_id, lower(name));
 
 create index if not exists dispatch_skills_org_category_idx
     on public.dispatch_skills (organization_id, category, is_active);
